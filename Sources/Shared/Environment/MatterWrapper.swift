@@ -37,9 +37,11 @@ public class MatterWrapper {
     /// Lazy, so the extensions never query HomeKit.
     public lazy var canShareDevice: Bool = {
         #if canImport(HomeKit) && canImport(Matter) && os(iOS) && !targetEnvironment(macCatalyst)
+        #if compiler(>=6.3)
         if #available(iOS 27, *) {
             return HMAccessorySetupManager.isSupported
         }
+        #endif
         return true
         #else
         return false

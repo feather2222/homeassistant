@@ -132,7 +132,9 @@ final class CarPlayAssistSession: NSObject {
             ),
             repeats: false
         )
+        #if compiler(>=6.3)
         idleState.actionButtons = actionButtons
+        #endif
 
         let recordingState = CPVoiceControlState(
             identifier: VoiceControlStateID.recording.rawValue,
@@ -161,7 +163,9 @@ final class CarPlayAssistSession: NSObject {
             image: MaterialDesignIcons.alertCircleIcon.carPlayIcon(color: .systemRed, context: .assistStateIndicator),
             repeats: false
         )
+        #if compiler(>=6.3)
         errorState.actionButtons = actionButtons
+        #endif
 
         return CPVoiceControlTemplate(
             voiceControlStates: [recordingState, processingState, respondingState, idleState, errorState]

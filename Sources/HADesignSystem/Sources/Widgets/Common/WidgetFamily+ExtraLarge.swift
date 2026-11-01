@@ -6,9 +6,11 @@ public extension WidgetFamily {
     /// landscape family, so a widget that fits one fits the other and has to offer both.
     static var extraLarges: [WidgetFamily] {
         var families: [WidgetFamily] = [.systemExtraLarge]
+        #if compiler(>=6.3)
         if #available(iOS 27.0, *) {
             families.append(.systemExtraLargePortrait)
         }
+        #endif
         return families
     }
 }

@@ -1,3 +1,4 @@
+#if compiler(>=6.3)
 import AppIntents
 import Foundation
 import Shared
@@ -45,3 +46,4 @@ struct GetRemindersAppIntent: AppIntent {
         return .result(value: includeCompleted ? items : items.filter { !$0.isCompleted })
     }
 }
+#endif

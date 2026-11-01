@@ -1,3 +1,4 @@
+#if compiler(>=6.3)
 import AppIntents
 import CoreSpotlight
 import Foundation
@@ -89,3 +90,4 @@ struct CalendarEventSchemaEntity: IndexedEntity {
         self.travelTime = nil
     }
 }
+#endif

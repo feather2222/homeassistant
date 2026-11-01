@@ -1,3 +1,4 @@
+#if compiler(>=6.3)
 import AppIntents
 import Foundation
 import Shared
@@ -36,3 +37,4 @@ struct ReminderSchemaEntityQuery: EntityQuery, EntityStringQuery {
         return results
     }
 }
+#endif

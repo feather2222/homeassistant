@@ -45,8 +45,8 @@ public struct HAHSColorPicker: View {
 
     /// Where the cursor sits: `saturation` out along the `hue` bearing, from the centre.
     private var cursorOffset: CGSize {
-        let radius = (diameter - Self.cursorDiameter) / 2 * Swift.min(Swift.max(saturation, 0), 1)
-        let radians = hue * .pi / 180
+        let radius = (diameter - Self.cursorDiameter) / 2 * CGFloat(Swift.min(Swift.max(saturation, 0), 1))
+        let radians = CGFloat(hue) * .pi / 180
         return CGSize(width: radius * cos(radians), height: radius * sin(radians))
     }
 

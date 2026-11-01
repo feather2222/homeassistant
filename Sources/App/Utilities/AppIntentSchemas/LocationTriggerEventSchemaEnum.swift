@@ -1,3 +1,4 @@
+#if compiler(>=6.3)
 import AppIntents
 import Foundation
 
@@ -13,3 +14,4 @@ enum LocationTriggerEventSchemaEnum: String {
         .depart: .init(title: .init("app_intents.reminders.location_trigger.depart", defaultValue: "Leaving")),
     ]
 }
+#endif

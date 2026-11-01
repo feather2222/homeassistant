@@ -35,9 +35,11 @@ extension WebViewController {
                 knownPanelPaths: Self.knownPanelPaths(serverId: serverId)
             )
             guard !Task.isCancelled, let self else { return }
+            #if compiler(>=6.3)
             if #available(iOS 18.4, *) {
                 publishOnscreenEntityElements(identifiers)
             }
+            #endif
         }
     }
 
@@ -48,6 +50,7 @@ extension WebViewController {
     ///
     /// The web view is one opaque view, so the element takes its whole area — there is no way to know
     /// where inside it the dialog was drawn, and the dialog covers it anyway.
+    #if compiler(>=6.3)
     @available(iOS 18.4, *)
     func publishOnscreenEntityElements(_ identifiers: [EntityIdentifier]) {
         guard let webView else { return }
@@ -69,6 +72,7 @@ extension WebViewController {
     ) -> [AppEntityUIElement] {
         identifiers.map { AppEntityUIElement(identifier: $0, bounds: bounds) }
     }
+    #endif
 
     /// Records the entity the frontend's more-info dialog is showing, so Siri can resolve "this"
     /// against it while it is up.

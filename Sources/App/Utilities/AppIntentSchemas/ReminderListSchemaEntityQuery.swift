@@ -1,3 +1,4 @@
+#if compiler(>=6.3)
 import AppIntents
 import Foundation
 import Shared
@@ -35,3 +36,4 @@ struct ReminderListSchemaEntityQuery: EntityQuery, EntityStringQuery {
         return lists().first { defaults.contains($0.id) }
     }
 }
+#endif

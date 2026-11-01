@@ -1,3 +1,4 @@
+#if compiler(>=6.3)
 import AppIntents
 import Foundation
 import GRDB
@@ -59,3 +60,4 @@ struct CalendarEventSchemaEntityQuery: EntityQuery, EntityStringQuery {
         }
     }
 }
+#endif

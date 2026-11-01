@@ -1,3 +1,4 @@
+#if compiler(>=6.3)
 import Foundation
 
 @available(iOS 27.0, *)
@@ -14,3 +15,4 @@ enum ReminderListResolution {
         }
     }
 }
+#endif

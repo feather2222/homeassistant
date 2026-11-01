@@ -1,3 +1,4 @@
+#if compiler(>=6.3)
 import AppIntents
 import Foundation
 
@@ -18,3 +19,4 @@ struct ReminderSectionSchemaEntity: TransientAppEntity {
         self.list = ReminderListSchemaEntity()
     }
 }
+#endif

@@ -1,3 +1,4 @@
+#if compiler(>=6.3)
 import AppIntents
 import CoreLocation
 import Foundation
@@ -23,3 +24,4 @@ struct LocationTriggerSchemaEntity: TransientAppEntity {
         self.event = .arrive
     }
 }
+#endif

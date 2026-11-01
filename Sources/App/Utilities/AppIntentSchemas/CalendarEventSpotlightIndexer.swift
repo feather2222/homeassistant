@@ -1,3 +1,4 @@
+#if compiler(>=6.3)
 import CoreSpotlight
 import Foundation
 import Shared
@@ -44,3 +45,4 @@ enum CalendarEventSpotlightIndexer {
         }
     }
 }
+#endif

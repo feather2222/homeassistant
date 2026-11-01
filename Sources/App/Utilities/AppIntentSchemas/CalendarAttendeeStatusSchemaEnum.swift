@@ -1,3 +1,4 @@
+#if compiler(>=6.3)
 import AppIntents
 import Foundation
 
@@ -17,3 +18,4 @@ enum CalendarAttendeeStatusSchemaEnum: String {
         .pending: .init(title: .init("app_intents.calendar.attendee_status.pending", defaultValue: "Pending")),
     ]
 }
+#endif

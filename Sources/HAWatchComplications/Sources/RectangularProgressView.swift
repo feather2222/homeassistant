@@ -118,7 +118,7 @@ public struct RectangularProgressView: View {
     }
 
     public var body: some View {
-        let clamped = min(max(fraction, 0), 1)
+        let clamped = CGFloat(min(max(fraction, 0), 1))
         VStack(spacing: Layout.stackSpacing) {
             GeometryReader { geo in
                 let width = geo.size.width

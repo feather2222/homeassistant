@@ -28,7 +28,7 @@ struct HomeAssistantAppShortcuts: AppShortcutsProvider {
                 "Turn on \(\.$entity) in \(.applicationName)",
                 "Turn something on in \(.applicationName)",
             ],
-            shortTitle: .init("app_shortcuts.turn_on.title", defaultValue: "Turn On"),
+            shortTitle: "Turn On",
             systemImageName: "lightswitch.on.fill",
             parameterPresentation: ParameterPresentation(
                 for: \.$entity,
@@ -36,7 +36,7 @@ struct HomeAssistantAppShortcuts: AppShortcutsProvider {
                 optionsCollections: {
                     OptionsCollection(
                         ControllableEntityAppEntityQuery(),
-                        title: .init("app_intents.controllable_entity.parameter.entity", defaultValue: "Entity"),
+                        title: "Entity",
                         systemImageName: "lightswitch.on.fill"
                     )
                 }
@@ -49,7 +49,7 @@ struct HomeAssistantAppShortcuts: AppShortcutsProvider {
                 "Turn off \(\.$entity) in \(.applicationName)",
                 "Turn something off in \(.applicationName)",
             ],
-            shortTitle: .init("app_shortcuts.turn_off.title", defaultValue: "Turn Off"),
+            shortTitle: "Turn Off",
             systemImageName: "lightswitch.off.fill",
             parameterPresentation: ParameterPresentation(
                 for: \.$entity,
@@ -57,7 +57,7 @@ struct HomeAssistantAppShortcuts: AppShortcutsProvider {
                 optionsCollections: {
                     OptionsCollection(
                         ControllableEntityAppEntityQuery(),
-                        title: .init("app_intents.controllable_entity.parameter.entity", defaultValue: "Entity"),
+                        title: "Entity",
                         systemImageName: "lightswitch.off.fill"
                     )
                 }
@@ -72,7 +72,7 @@ struct HomeAssistantAppShortcuts: AppShortcutsProvider {
                 "Is \(\.$entity) on in \(.applicationName)",
                 "What is the state of \(\.$entity) in \(.applicationName)",
             ],
-            shortTitle: .init("app_shortcuts.get_entity_state.title", defaultValue: "Get Entity State"),
+            shortTitle: "Get Entity State",
             systemImageName: "info.circle",
             parameterPresentation: ParameterPresentation(
                 for: \.$entity,
@@ -80,7 +80,7 @@ struct HomeAssistantAppShortcuts: AppShortcutsProvider {
                 optionsCollections: {
                     OptionsCollection(
                         ReadableEntityAppEntityQuery(),
-                        title: .init("app_intents.entity_state.parameter.entity", defaultValue: "Entity"),
+                        title: "Entity",
                         systemImageName: "info.circle"
                     )
                 }
@@ -99,7 +99,7 @@ struct HomeAssistantAppShortcuts: AppShortcutsProvider {
                 "Open \(\.$target) details in \(.applicationName)",
                 "Show something in \(.applicationName)",
             ],
-            shortTitle: .init("app_shortcuts.show_entity.title", defaultValue: "Show Entity"),
+            shortTitle: "Show Entity",
             systemImageName: "arrow.up.forward.app",
             parameterPresentation: ParameterPresentation(
                 for: \.$target,
@@ -107,7 +107,7 @@ struct HomeAssistantAppShortcuts: AppShortcutsProvider {
                 optionsCollections: {
                     OptionsCollection(
                         ReadableEntityOptionsProvider(),
-                        title: .init("app_intents.show_entity_details.parameter.entity", defaultValue: "Entity"),
+                        title: "Entity",
                         systemImageName: "arrow.up.forward.app"
                     )
                 }
@@ -120,7 +120,7 @@ struct HomeAssistantAppShortcuts: AppShortcutsProvider {
                 "Set a temperature in \(.applicationName)",
                 "Set \(\.$entity) temperature in \(.applicationName)",
             ],
-            shortTitle: .init("app_shortcuts.set_temperature.title", defaultValue: "Set Temperature"),
+            shortTitle: "Set Temperature",
             systemImageName: "thermometer",
             parameterPresentation: ParameterPresentation(
                 for: \.$entity,
@@ -128,7 +128,7 @@ struct HomeAssistantAppShortcuts: AppShortcutsProvider {
                 optionsCollections: {
                     OptionsCollection(
                         ThermostatAppEntityQuery(),
-                        title: .init("app_intents.set_temperature.parameter.entity", defaultValue: "Thermostat"),
+                        title: "Thermostat",
                         systemImageName: "thermometer"
                     )
                 }
@@ -141,7 +141,7 @@ struct HomeAssistantAppShortcuts: AppShortcutsProvider {
                 "Set a brightness in \(.applicationName)",
                 "Dim \(\.$light) in \(.applicationName)",
             ],
-            shortTitle: .init("app_shortcuts.set_brightness.title", defaultValue: "Set Brightness"),
+            shortTitle: "Set Brightness",
             systemImageName: "sun.max",
             parameterPresentation: ParameterPresentation(
                 for: \.$light,
@@ -149,7 +149,7 @@ struct HomeAssistantAppShortcuts: AppShortcutsProvider {
                 optionsCollections: {
                     OptionsCollection(
                         DimmableLightAppEntityQuery(),
-                        title: .init("app_intents.lights.light.title", defaultValue: "Light"),
+                        title: "Light",
                         systemImageName: "sun.max"
                     )
                 }
@@ -164,7 +164,7 @@ struct HomeAssistantAppShortcuts: AppShortcutsProvider {
                 "Open \(\.$entity) in \(.applicationName)",
                 "Open something in \(.applicationName)",
             ],
-            shortTitle: .init("app_shortcuts.open.title", defaultValue: "Open"),
+            shortTitle: "Open",
             systemImageName: "curtains.open",
             parameterPresentation: ParameterPresentation(
                 for: \.$entity,
@@ -172,7 +172,7 @@ struct HomeAssistantAppShortcuts: AppShortcutsProvider {
                 optionsCollections: {
                     OptionsCollection(
                         OpenableEntityAppEntityQuery(),
-                        title: .init("app_intents.open_close.entity.name", defaultValue: "Cover"),
+                        title: "Cover",
                         systemImageName: "curtains.open"
                     )
                 }
@@ -185,7 +185,7 @@ struct HomeAssistantAppShortcuts: AppShortcutsProvider {
                 "Close \(\.$entity) in \(.applicationName)",
                 "Close something in \(.applicationName)",
             ],
-            shortTitle: .init("app_shortcuts.close.title", defaultValue: "Close"),
+            shortTitle: "Close",
             systemImageName: "curtains.closed",
             parameterPresentation: ParameterPresentation(
                 for: \.$entity,
@@ -193,7 +193,7 @@ struct HomeAssistantAppShortcuts: AppShortcutsProvider {
                 optionsCollections: {
                     OptionsCollection(
                         OpenableEntityAppEntityQuery(),
-                        title: .init("app_intents.open_close.entity.name", defaultValue: "Cover"),
+                        title: "Cover",
                         systemImageName: "curtains.closed"
                     )
                 }

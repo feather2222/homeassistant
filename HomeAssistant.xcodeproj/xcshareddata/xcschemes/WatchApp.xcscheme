@@ -67,6 +67,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "42D14C6C301BB6330058088E"
                BuildableName = "HomeAssistant-WatchAppTests.xctest"
+               BlueprintName = "HomeAssistant-WatchAppTests"
                ReferencedContainer = "container:HomeAssistant.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -89,6 +90,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B6CC5D812159D10D00833E5D"
             BuildableName = "HomeAssistant-WatchApp.app"
+            BlueprintName = "WatchApp"
             ReferencedContainer = "container:HomeAssistant.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -106,6 +108,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B6CC5D812159D10D00833E5D"
             BuildableName = "HomeAssistant-WatchApp.app"
+            BlueprintName = "WatchApp"
             ReferencedContainer = "container:HomeAssistant.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

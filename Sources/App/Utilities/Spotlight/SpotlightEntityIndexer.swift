@@ -180,9 +180,11 @@ final class SpotlightEntityIndexer: ServerObserver {
     /// Events are indexed on their own because the entity is iOS 27; see
     /// `CalendarEventSpotlightIndexer` for why it isn't part of the snapshot.
     private func reindexCalendarEvents() async {
+        #if compiler(>=6.3)
         if #available(iOS 27.0, *) {
             await CalendarEventSpotlightIndexer.reindex(index: index, defaults: defaults)
         }
+        #endif
     }
 
     private func reindex(reason: String) async {

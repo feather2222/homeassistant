@@ -1,3 +1,4 @@
+#if compiler(>=6.3)
 import AppIntents
 import CoreSpotlight
 import Foundation
@@ -48,3 +49,4 @@ struct ReminderListSchemaEntity: IndexedEntity {
         self.type = .standard
     }
 }
+#endif

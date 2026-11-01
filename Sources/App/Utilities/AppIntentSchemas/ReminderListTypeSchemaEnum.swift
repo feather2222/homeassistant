@@ -1,3 +1,4 @@
+#if compiler(>=6.3)
 import AppIntents
 import Foundation
 
@@ -12,3 +13,4 @@ enum ReminderListTypeSchemaEnum: String {
         .standard: .init(title: .init("app_intents.reminders.list_type.standard", defaultValue: "List")),
     ]
 }
+#endif

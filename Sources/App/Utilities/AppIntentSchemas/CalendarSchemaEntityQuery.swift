@@ -1,3 +1,4 @@
+#if compiler(>=6.3)
 import AppIntents
 import Foundation
 import Shared
@@ -27,3 +28,4 @@ struct CalendarSchemaEntityQuery: EntityQuery, EntityStringQuery {
         CalendarSchemaSupport.defaultCalendar().map(CalendarSchemaEntity.init(calendar:))
     }
 }
+#endif

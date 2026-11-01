@@ -1,3 +1,4 @@
+#if compiler(>=6.3)
 import AppIntents
 import Foundation
 import Shared
@@ -24,3 +25,4 @@ struct DeleteEventSchemaIntent {
         return .result()
     }
 }
+#endif

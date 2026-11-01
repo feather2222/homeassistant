@@ -1,3 +1,4 @@
+#if compiler(>=6.3)
 import AppIntents
 import Foundation
 
@@ -25,3 +26,4 @@ enum EventSpanSchemaEnum: String {
         }
     }
 }
+#endif

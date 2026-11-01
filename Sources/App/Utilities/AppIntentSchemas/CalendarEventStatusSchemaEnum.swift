@@ -1,3 +1,4 @@
+#if compiler(>=6.3)
 import AppIntents
 import Foundation
 
@@ -15,3 +16,4 @@ enum CalendarEventStatusSchemaEnum: String {
         .cancelled: .init(title: .init("app_intents.calendar.event_status.cancelled", defaultValue: "Cancelled")),
     ]
 }
+#endif

@@ -1,3 +1,4 @@
+#if compiler(>=6.3)
 import AppIntents
 import CoreSpotlight
 import Foundation
@@ -25,3 +26,4 @@ struct CalendarSchemaEntity: IndexedEntity {
         self.title = calendar.name
     }
 }
+#endif

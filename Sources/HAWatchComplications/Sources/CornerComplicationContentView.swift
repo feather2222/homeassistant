@@ -80,7 +80,7 @@ public struct CornerComplicationContentView: View {
     private var gaugeRadius: CGFloat { arcCenter.y - (stackTop + stackContentHeight + gaugeInset) }
     /// Half the sweep (degrees), sized for a roughly constant ~55pt arc whatever the radius — longer when
     /// the bezel text shares it, since the watch hands that line the whole bezel.
-    private var halfSpan: Double { min(32, (bezelText == nil ? 27.5 : 40) / gaugeRadius * 180 / .pi) }
+    private var halfSpan: Double { min(32, (bezelText == nil ? 27.5 : 40) / Double(gaugeRadius) * 180 / .pi) }
     private var startAngle: Double { -90 - halfSpan }
     private var endAngle: Double { -90 + halfSpan }
     private var currentAngle: Double {

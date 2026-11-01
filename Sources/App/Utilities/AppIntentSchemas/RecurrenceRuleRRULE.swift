@@ -1,3 +1,4 @@
+#if compiler(>=6.3)
 import Foundation
 
 /// Turns the system's recurrence rule into the iCalendar RRULE Home Assistant stores.
@@ -45,3 +46,4 @@ extension Calendar.RecurrenceRule {
         return formatter
     }()
 }
+#endif
